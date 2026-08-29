@@ -1,11 +1,28 @@
 {
-  "syncedAt": "2026-08-28T18:29:06.080Z",
+  "syncedAt": "2026-08-29T12:35:03.714Z",
   "orgs": [
     "McMasterAI-Society",
     "McMasterAI"
   ],
   "count": 24,
   "projects": [
+    {
+      "id": "868633230",
+      "name": "ArtSuggesterAI",
+      "description": "AI-based art recommendation tool. Take a photo of your art supplies and get art recommendations",
+      "language": "JavaScript",
+      "topics": [],
+      "stars": 3,
+      "forks": 0,
+      "year": 2024,
+      "updatedAt": "2026-08-28T21:29:10Z",
+      "url": "https://github.com/McMasterAI-Society/ArtSuggesterAI",
+      "homepage": null,
+      "org": "McMasterAI-Society",
+      "image": "https://opengraph.githubassets.com/1/McMasterAI-Society/ArtSuggesterAI",
+      "isArchived": false,
+      "isFork": false
+    },
     {
       "id": "1157465238",
       "name": "MacAISocietyWebsite2026",
@@ -15,7 +32,7 @@
       "stars": 1,
       "forks": 0,
       "year": 2026,
-      "updatedAt": "2026-08-27T17:54:45Z",
+      "updatedAt": "2026-08-28T18:30:01Z",
       "url": "https://github.com/McMasterAI-Society/MacAISocietyWebsite2026",
       "homepage": "https://mac-ai-society-website2026.vercel.app",
       "org": "McMasterAI-Society",
@@ -184,23 +201,6 @@
       "homepage": null,
       "org": "McMasterAI-Society",
       "image": "https://opengraph.githubassets.com/1/McMasterAI-Society/Artlingo",
-      "isArchived": false,
-      "isFork": false
-    },
-    {
-      "id": "868633230",
-      "name": "ArtSuggesterAI",
-      "description": "AI-based art recommendation tool. Take a photo of your art supplies and get art recommendations",
-      "language": "JavaScript",
-      "topics": [],
-      "stars": 4,
-      "forks": 0,
-      "year": 2024,
-      "updatedAt": "2025-10-19T18:44:18Z",
-      "url": "https://github.com/McMasterAI-Society/ArtSuggesterAI",
-      "homepage": null,
-      "org": "McMasterAI-Society",
-      "image": "https://opengraph.githubassets.com/1/McMasterAI-Society/ArtSuggesterAI",
       "isArchived": false,
       "isFork": false
     },

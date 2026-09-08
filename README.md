@@ -14,7 +14,7 @@ Official website for the McMaster AI Society, featuring event information, proje
 
 ```bash
 # Clone the repository
-git clone https://github.com/MarcoDava/MacAISocietyWebsite2026.git
+git clone https://github.com/McMasterAI-Society/MacAISocietyWebsite2026.git
 cd MacAISocietyWebsite2026
 
 # Navigate to frontend directory

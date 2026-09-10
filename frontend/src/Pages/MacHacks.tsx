@@ -86,11 +86,17 @@ export default function MacHacks() {
               <p className="text-[#E1E0E0] text-lg leading-relaxed mb-6">
                 MacHacks — presented by the McMaster Artificial Intelligence Society — is one of Canada's first major hackathons with a focus on Artificial Intelligence. The competition is sprint-style and enables students from all disciplines and experience levels to come together to produce innovative solutions.
               </p>
+              {/* # Winter 2026 MacHacks information
               <p className="text-[#E1E0E0] text-lg leading-relaxed mb-6">
                 This year's event will be a one day MLH certified HackDay on Saturday March 21st, from 9am-9pm in PGCLL. We can't wait to see you there! More information regarding scheduling and workshops will be released on our Instagram and website in the coming weeks.
               </p>
+              */}
+              <p className="text-[#E1E0E0] text-lg leading-relaxed mb-6">
+                The next MacHacks event will be taking place in March 2027. Stay tuned for details.
+              </p>
+
               <p className="text-[#E1E0E0]/80 mb-8">
-                Interested in partnering with us and impacting students through MacHacks 2026?{' '}
+                Interested in partnering with us and impacting students through MacHacks 2027?{' '}
                 <Link to="/partnerships" className="text-[#8B3D5A] hover:underline font-medium">Contact us!</Link>
               </p>
             </motion.div>
@@ -129,12 +135,12 @@ export default function MacHacks() {
               className="rounded-2xl bg-[#221A1D] border border-[#35494C]/40 p-6 md:p-8"
             >
               <div className="font-heading text-4xl md:text-5xl font-bold text-[#8B3D5A]">
-                <CountUp end={3} />
+                <CountUp end={4} />
               </div>
               <p className="mt-2 text-sm uppercase tracking-wide text-[#E1E0E0]/70">
                 Weekends of hacking
               </p>
-              <p className="mt-4 text-sm text-[#E1E0E0]/80">In 2021, 2022, 2023.</p>
+              <p className="mt-4 text-sm text-[#E1E0E0]/80">In 2021, 2022, 2023, and 2026.</p>
             </motion.div>
 
             <motion.div
@@ -142,7 +148,7 @@ export default function MacHacks() {
               className="rounded-2xl bg-[#221A1D] border border-[#35494C]/40 p-6 md:p-8"
             >
               <div className="font-heading text-4xl md:text-5xl font-bold text-[#4F7C80]">
-                <CountUp end={500} suffix="+" />
+                <CountUp end={620} suffix="+" />
               </div>
               <p className="mt-2 text-sm uppercase tracking-wide text-[#E1E0E0]/70">
                 Attendees
@@ -155,7 +161,7 @@ export default function MacHacks() {
               className="rounded-2xl bg-[#221A1D] border border-[#35494C]/40 p-6 md:p-8"
             >
               <div className="font-heading text-4xl md:text-5xl font-bold text-[#C0A35B]">
-                <CountUp end={71} />
+                <CountUp end={110} suffix="+"/>
               </div>
               <p className="mt-2 text-sm uppercase tracking-wide text-[#E1E0E0]/70">
                 Submissions

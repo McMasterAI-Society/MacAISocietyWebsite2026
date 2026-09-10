@@ -54,8 +54,28 @@ async function fetchAllRepos(org) {
   return repos;
 }
 
+/**
+ * Map a repo's creation date to an "event year":
+ * - Created in May–December → year = createdYear + 1
+ * - Created in January–April → year = createdYear
+ *
+ * This handles last-minute/short-notice projects created early in the year.
+ */
+function getProjectYear(repo) {
+  const created = new Date(repo.created_at);
+  const createdYear = created.getFullYear();
+  const month = created.getMonth(); // 0 = January, 11 = December
+
+  // May (4) through December (11) -> next event year
+  if (month >= 4) {
+    return createdYear + 1;
+  }
+
+  // January (0) through April (3) -> same event year
+  return createdYear;
+}
+
 function transformRepo(repo) {
-  const createdYear = new Date(repo.created_at).getFullYear();
   return {
     id: String(repo.id),
     name: repo.name,
@@ -64,7 +84,7 @@ function transformRepo(repo) {
     topics: repo.topics || [],
     stars: repo.stargazers_count,
     forks: repo.forks_count,
-    year: createdYear,
+    year: getProjectYear(repo),
     updatedAt: repo.updated_at,
     url: repo.html_url,
     homepage: repo.homepage || null,

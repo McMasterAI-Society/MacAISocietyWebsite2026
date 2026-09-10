@@ -138,7 +138,67 @@ export const PAST_YEARS: PastMacHacks[] = [
 // ============================================
 // Past MacHacks – Hero parallax projects
 // ============================================
-export const PARALLAX_PRODUCTS = [
+export interface ParallaxProduct {
+  title: string;
+  link: string;
+  thumbnail?: string;
+  featured?: boolean; // Always shown, and placed in the most visible spots
+  badge?: string; // Small label shown on the card, e.g. 'MacHacks 2026 Winner'
+}
+
+// List of badge labels
+const WINNER_2026 = 'MacHacks 2026 Winner';
+
+export const PARALLAX_PRODUCTS: ParallaxProduct[] = [
+  {
+    title: 'Pres.AI',
+    link: 'https://devpost.com/software/pres-ai',
+    thumbnail: 'https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/004/477/740/datas/gallery.jpg',
+    featured: true,
+    badge: WINNER_2026,
+  },
+  {
+    title: 'EO',
+    link: 'https://devpost.com/software/eo-p7sn1u',
+    thumbnail: 'https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/004/477/696/datas/gallery.jpg',
+    featured: true,
+    badge: WINNER_2026,
+  },
+  {
+    title: 'ScribeDoc',
+    link: 'https://devpost.com/software/scribedoc',
+    thumbnail: 'https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/004/477/600/datas/gallery.jpg',
+    featured: true,
+    badge: WINNER_2026,
+  },
+  {
+    title: 'CarePlate',
+    link: 'https://devpost.com/software/careplate',
+    thumbnail: 'https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/004/477/944/datas/gallery.jpg',
+    featured: true,
+    badge: WINNER_2026,
+  },
+  {
+    title: 'LexiconAI',
+    link: 'https://devpost.com/software/lexiconai',
+    thumbnail: 'https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/004/477/681/datas/gallery.jpg',
+    featured: true,
+    badge: WINNER_2026,
+  },
+  {
+    title: 'SkinSight',
+    link: 'https://devpost.com/software/skinsight-p6l5g0',
+    thumbnail: 'https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/004/477/770/datas/gallery.jpg',
+    featured: true,
+    badge: WINNER_2026,
+  },
+  {
+    title: 'CADence',
+    link: 'https://devpost.com/software/cadence-tl2bzi',
+    thumbnail: 'https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/004/487/277/datas/gallery.jpg',
+    featured: true,
+    badge: WINNER_2026,
+  },
   {
     title: 'Friday',
     link: 'https://devpost.com/software/friday-utoy85',

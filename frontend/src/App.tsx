@@ -11,6 +11,7 @@ import AboutUs from './Pages/AboutUs';
 import Team from './Pages/Team';
 import NotFound from './Pages/NotFound';
 
+// Main App component
 function App() {
   return (
     <>

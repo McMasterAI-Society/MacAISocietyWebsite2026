@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import React, { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 
 export const InfiniteMovingCards = ({
   items,
@@ -22,55 +22,35 @@ export const InfiniteMovingCards = ({
   pauseOnHover?: boolean;
   className?: string;
 }) => {
-  const containerRef = React.useRef<HTMLDivElement>(null);
-  const scrollerRef = React.useRef<HTMLUListElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const scrollerRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
-    addAnimation();
-  }, []);
-  const [start, setStart] = useState(false);
-  function addAnimation() {
-    if (containerRef.current && scrollerRef.current) {
-      const scrollerContent = Array.from(scrollerRef.current.children);
+    const container = containerRef.current;
+    const scroller = scrollerRef.current;
+    if (!container || !scroller) return;
 
-      scrollerContent.forEach((item) => {
-        const duplicatedItem = item.cloneNode(true);
-        if (scrollerRef.current) {
-          scrollerRef.current.appendChild(duplicatedItem);
-        }
-      });
+    // Duplicate items for seamless looping
+    const scrollerContent = Array.from(scroller.children);
+    scrollerContent.forEach((item) => {
+      scroller.appendChild(item.cloneNode(true));
+    });
 
-      getDirection();
-      getSpeed();
-      setStart(true);
-    }
-  }
-  const getDirection = () => {
-    if (containerRef.current) {
-      if (direction === "left") {
-        containerRef.current.style.setProperty(
-          "--animation-direction",
-          "forwards",
-        );
-      } else {
-        containerRef.current.style.setProperty(
-          "--animation-direction",
-          "reverse",
-        );
-      }
-    }
-  };
-  const getSpeed = () => {
-    if (containerRef.current) {
-      if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "20s");
-      } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "40s");
-      } else {
-        containerRef.current.style.setProperty("--animation-duration", "80s");
-      }
-    }
-  };
+    // Set direction
+    container.style.setProperty(
+      "--animation-direction",
+      direction === "left" ? "forwards" : "reverse"
+    );
+
+    // Set speed
+    const duration =
+      speed === "fast" ? "20s" : speed === "normal" ? "40s" : "80s";
+    container.style.setProperty("--animation-duration", duration);
+
+    // Start the animation directly via the DOM
+    scroller.classList.add("animate-scroll");
+  }, [direction, speed]);
+
   return (
     <div
       ref={containerRef}
@@ -83,7 +63,6 @@ export const InfiniteMovingCards = ({
         ref={scrollerRef}
         className={cn(
           "flex w-max min-w-full shrink-0 flex-nowrap gap-4 py-4",
-          start && "animate-scroll",
           pauseOnHover && "hover:[animation-play-state:paused]",
         )}
       >

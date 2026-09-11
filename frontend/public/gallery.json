@@ -1,6 +1,6 @@
 {
-  "syncedAt": "2026-09-10T11:03:05.304Z",
-  "count": 44,
+  "syncedAt": "2026-09-11T11:01:17.086Z",
+  "count": 47,
   "images": [
     {
       "id": "b0cf5f99836032e2f2c4ac7f6f0a53d1",
@@ -110,6 +110,28 @@
       "year": "2021-2022",
       "width": 2048,
       "height": 1365,
+      "orientation": "landscape"
+    },
+    {
+      "id": "32b0cdbed3a535b60bdf9ef83d552f64",
+      "src": "https://res.cloudinary.com/db9cfrk5z/image/upload/q_auto,f_auto/v1789069129/IMG_6740_wgpf5f.jpg",
+      "thumb": "https://res.cloudinary.com/db9cfrk5z/image/upload/w_800,h_600,c_fill,q_auto,f_auto/v1789069129/IMG_6740_wgpf5f.jpg",
+      "caption": "",
+      "event": "Club Events",
+      "year": "2023-2024",
+      "width": 4032,
+      "height": 3024,
+      "orientation": "landscape"
+    },
+    {
+      "id": "6345cb011e15454da9bffe708f856793",
+      "src": "https://res.cloudinary.com/db9cfrk5z/image/upload/q_auto,f_auto/v1789069128/IMG_6741_fo4q6x.jpg",
+      "thumb": "https://res.cloudinary.com/db9cfrk5z/image/upload/w_800,h_600,c_fill,q_auto,f_auto/v1789069128/IMG_6741_fo4q6x.jpg",
+      "caption": "",
+      "event": "Club Events",
+      "year": "2023-2024",
+      "width": 4032,
+      "height": 3024,
       "orientation": "landscape"
     },
     {
@@ -308,6 +330,17 @@
       "year": "2023-2024",
       "width": 4096,
       "height": 2730,
+      "orientation": "landscape"
+    },
+    {
+      "id": "e996f3cf9e58f63717683f7c7146e492",
+      "src": "https://res.cloudinary.com/db9cfrk5z/image/upload/q_auto,f_auto/v1789064054/IMG_6740_hxabe6.jpg",
+      "thumb": "https://res.cloudinary.com/db9cfrk5z/image/upload/w_800,h_600,c_fill,q_auto,f_auto/v1789064054/IMG_6740_hxabe6.jpg",
+      "caption": "",
+      "event": "Current Semester",
+      "year": "2024-2025",
+      "width": 4032,
+      "height": 3024,
       "orientation": "landscape"
     },
     {

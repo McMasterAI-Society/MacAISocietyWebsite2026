@@ -14,7 +14,7 @@ export default function Contact() {
   };
   const valid = !errors.name && !errors.email && !errors.message;
 
-  const FORMSPREE_ID = 'xbdzagdr';
+  const FORMSPREE_ID = 'xaenyker';
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();

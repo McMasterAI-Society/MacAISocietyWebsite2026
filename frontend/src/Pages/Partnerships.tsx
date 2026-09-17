@@ -5,7 +5,7 @@ import { CURRENT_PARTNERS, PAST_PARTNERS } from '../data/partners';
 import CountUp from '@/Components/CountUp';
 
 // Change this ID when the partnerships form gets its own Formspree endpoint
-const PARTNERSHIPS_FORMSPREE_ID = 'xbdzagdr';
+const PARTNERSHIPS_FORMSPREE_ID = 'mljdevbe';
 
 
 export default function Partnerships() {

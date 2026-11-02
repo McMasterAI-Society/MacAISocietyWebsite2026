@@ -16,6 +16,8 @@ import calderImg from '../assets/Team/CalderSmith.jpg';
 import marcoImg from '../assets/Team/MarcoDava.png';
 import danielImg from '../assets/Team/DanielNguyen.png';
 import jackImg from '../assets/Team/JackEaston.jpg';
+import andreaImg from '@/assets/Team/Andrea Oliver.jpg';
+import cyrusImg from '@/assets/Team/Cyrus Tehrani.jpg';
 
 export interface TeamMember {
   name: string;
@@ -78,5 +80,23 @@ With a wealth of experience, Dr. Lobana has provided services to over 50 nationa
     image: andresImg,
     linkedin: 'https://www.linkedin.com/in/andres-rojas-ai',
     bio: `Andres is the Director of Applied AI Projects at the Vector Institute for Artificial Intelligence, where he is accelerating the adoption of AI in some of Canada's most influential companies. Some key areas of his work include Trustworthy AI and its Governance and translating AI quirks to the corporate environment. Andres has over 15 years of experience in the financial industry spanning more than 16 countries, designing and implementing data-enabled solutions to achieve greater operational performance, stronger risk management and enhanced business responsiveness. He is an Industrial Engineer from the University of Chile, holds an MBA from Manchester University, a certified Project Management Professional and was part of the first cohort to receive a certificate in AI from the University of Toronto. Andres' multiple interests include innovation in education and experiential learning, dabbling in application development and home automation, reading and learning across a vast range of genres and topics, and spending time with his family and dog.`,
+  },
+  {
+    name: 'Andrea Oliver',
+    title: 'Member',
+    image: andreaImg,
+    linkedin: 'https://www.linkedin.com/in/andrea-oliver/',
+    bio: `Andrea Oliver is the Director of Enterprise Applications & Data Services at McMaster University and a technology leader with over 25 years of experience across higher education, municipal government, and the Ontario public sector. Her expertise spans enterprise technology strategy, data governance, digital transformation, and the modernization of mission-critical systems. At McMaster, she leads enterprise business systems and institutional data platforms and has helped lead the transformation of the University's data and analytics capabilities. Her work contributed to McMaster's 2026 IDC CIO Awards Canada recognition and the team's 2026 CUCCIO Innovation Award for McMaster's Data and Analytics Platform.
+
+Prior to McMaster, Andrea held senior technology leadership roles with the City of Mississauga and the Ontario Public Service. She also serves on the Digital Governance Standards Institute's technical committees on Data Governance and Ethical AI and as a Subject Matter Expert with the Digital Governance Council. Andrea holds a BSc in Computer Science from the University of the West Indies, an MBA from the University of Guelph, and a Project Management Professional (PMP) certification.`,
+  },
+  {
+    name: 'Cyrus Tehrani',
+    title: 'Member',
+    image: cyrusImg,
+    linkedin: 'https://www.linkedin.com/in/cyrus-tehrani/',
+    bio: `Cyrus Tehrani is the Chief Information Officer for the City of Hamilton, where he leads the City's technology strategy, digital transformation, cybersecurity, infrastructure, and enterprise technology initiatives. He previously served as the City's Chief Digital Officer and Director of Innovation, helping advance the use of technology to improve public services and support the City's broader transformation priorities.
+
+Prior to joining the City of Hamilton, Cyrus held several technology leadership roles at St. Joseph's Healthcare Hamilton, including Director of Digital Solutions and Interim Director of ICT. His career spans technology leadership, digital innovation, project management, and large-scale organizational transformation across the public and healthcare sectors. Cyrus is a Professional Engineer (P.Eng.) and Project Management Professional (PMP) and holds a Bachelor of Engineering & Management in Mechanical Engineering from McMaster University.`,
   },
 ];

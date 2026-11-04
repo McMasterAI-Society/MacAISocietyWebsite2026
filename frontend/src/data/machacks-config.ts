@@ -1,5 +1,5 @@
 /**
- * MacHacks 2026 Configuration
+ * MacHacks 2027 Configuration
  *
  * This file contains all configurable data for the MacHacks page.
  * Execs can update schedule, sponsors, and event details here.
@@ -35,9 +35,9 @@ import xyzLogo from '../assets/SponsorImages/PastMacHacks/xyz.png';
 // Event Metadata
 // ============================================
 export const EVENT_INFO = {
-  year: 2026,
-  date: 'Saturday March 21st, 2026',
-  location: 'McMaster University, PGCLL',
+  year: 2027,
+  date: 'Saturday March 20th, 2027',
+  location: 'McMaster University',
   tagline: "McMaster AI Society's flagship hackathon",
   description: "MacHacks — presented by the McMaster Artificial Intelligence Society — is one of Canada's first major hackathons with a focus on Artificial Intelligence. The competition is sprint-style and enables students from all disciplines and experience levels to come together to produce innovative solutions.",
   registrationUrl: '#',
@@ -220,11 +220,11 @@ export interface FAQItem {
 }
 
 export const FAQ: FAQItem[] = [
-  { q: 'When is MacHacks 2026?', a: 'Saturday, March 21st 2026 from 9am-9pm.' },
-  { q: 'Where is MacHacks 2026?', a: 'Peter George Centre for Living and Learning (PGCLL) on the McMaster Campus.' },
-  { q: 'Am I eligible to participate in MacHacks?', a: 'Anyone from any post secondary school can attend MacHacks 2026, regardless of year or program.' },
+  { q: 'When is MacHacks 2027?', a: 'Saturday, March 20th 2027. More details on timing will be shared soon.' },
+  { q: 'Where is MacHacks 2027?', a: 'On the McMaster campus. The exact venue will be announced soon.' },
+  { q: 'Am I eligible to participate in MacHacks?', a: 'Anyone from any post secondary school can attend MacHacks 2027, regardless of year or program.' },
   { q: 'How much does it cost to participate in MacHacks?', a: 'MacHacks is free for participants!' },
-  { q: "Why haven't I heard of MacHacks? Is it new?", a: 'MacHacks was run in 2021, 2022 and 2023 and is back for 2026 after a brief hiatus! Check out the past events section for more info.' },
+  { q: "Why haven't I heard of MacHacks? Is it new?", a: 'MacHacks was run in 2021, 2022, 2023 and 2026, and is back for 2027! Check out the past events section for more info.' },
   { q: "I've never been to a hackathon before, can I still participate?", a: "Yes! MacHacks is a beginner friendly hackathon and we highly encourage giving it a shot. There will be sessions and mentors throughout the event to help you. We can't wait to see you there :)" },
   { q: 'How big should my team be?', a: "Teams can have 1-4 people but we highly encourage working with at least one other person. It's okay if you don't have a team going into the event, there will be opportunities for team forming on the day of the hackathon." },
   { q: 'What do I need to bring?', a: "You'll need a laptop and charger. An idea and team are not necessary, although feel free to come in with a pre-assembled team! We will have team building sessions to help you meet new people with who you can make an amazing hack." },

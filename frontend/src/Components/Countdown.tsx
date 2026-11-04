@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const MACHACKS_DATE = new Date('2026-03-21T09:00:00');
+const MACHACKS_DATE = new Date('2027-03-20T09:00:00');
 
 function pad(n: number) {
   return n < 10 ? `0${n}` : String(n);

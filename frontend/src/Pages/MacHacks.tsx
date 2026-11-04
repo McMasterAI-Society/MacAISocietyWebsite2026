@@ -92,7 +92,7 @@ export default function MacHacks() {
               </p>
               */}
               <p className="text-[#E1E0E0] text-lg leading-relaxed mb-6">
-                The next MacHacks event will be taking place in March 2027. Stay tuned for details.
+                The next MacHacks event will be taking place on Saturday March 20th, 2027! Stay tuned for further details.
               </p>
 
               <p className="text-[#E1E0E0]/80 mb-8">

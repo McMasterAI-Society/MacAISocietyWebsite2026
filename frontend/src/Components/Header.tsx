@@ -102,7 +102,7 @@ export default function Header() {
                 }`}
                 onClick={() => setMenuOpen(false)}
               >
-                {isMacHacks ? 'Register for MacHacks' : 'Register for MacHacks 2026'}
+                View MacHacks
               </Link>
             </li>
           </ul>

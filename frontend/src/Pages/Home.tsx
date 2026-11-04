@@ -81,7 +81,7 @@ const PATHWAYS: Record<string, string> = {
   projects: 'Join a project team and ship something real. Check out our Projects page and apply.',
   workshops: 'Attend workshops and grow your skills. Keep an eye on events and our Discord.',
   mentor: 'Share your experience as a mentor. Reach out to the team to get involved.',
-  hackathons: 'MacHacks 2026 is for you. Register and join us on March 21st.',
+  hackathons: 'MacHacks 2027 is for you. Join us on March 20th, 2027.',
 };
 
 export default function Home() {
@@ -282,7 +282,7 @@ export default function Home() {
             
             <h2 className="font-heading text-5xl md:text-6xl font-bold text-white mb-6 drop-shadow-[0_0_20px_rgba(28,177,227,0.3)]">MacHacks</h2>
             <p className="text-xl text-white/70 mb-12 max-w-2xl mx-auto">
-              Our flagship hackathon returns on March 21st. Join hundreds of students to build, learn, and compete.
+              Our flagship hackathon returns on March 20th, 2027. Join hundreds of students to build, learn, and compete.
             </p>
           </motion.div>
           <motion.div {...fadeIn}>

@@ -10,7 +10,7 @@ const FOOTER_LINKS = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
   { to: '/team', label: 'Team' },
-  { to: '/machacks', label: 'MacHacks 2026' },
+  { to: '/machacks', label: 'MacHacks 2027' },
   { to: '/projects', label: 'Projects' },
   { to: '/partnerships', label: 'Partnerships' },
   { to: '/gallery', label: 'Gallery' },

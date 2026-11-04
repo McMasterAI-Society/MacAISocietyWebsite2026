@@ -202,7 +202,7 @@ export default function MacHacks() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Sponsors
+              2026 MacHacks Sponsors
             </h2>
             <motion.p
               {...fadeIn}

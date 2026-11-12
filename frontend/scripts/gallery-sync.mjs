@@ -15,14 +15,20 @@ const CLOUD_NAME = process.env.CLOUDINARY_CLOUD_NAME;
 const API_KEY = process.env.CLOUDINARY_API_KEY;
 const API_SECRET = process.env.CLOUDINARY_API_SECRET;
 
-// Folders in Cloudinary to scan (under macai/ folder)
-// yearLabel comes from the folder name itself (e.g. "2024-2025")
+// Folders in Cloudinary to scan (under macai/ folder), oldest → newest.
+// yearLabel comes from the folder name itself (e.g. "2024-2025").
+// Folders that don't exist yet are fine — they return 0 images and are skipped.
+// The newest folder that actually has photos is labelled CURRENT_EVENT instead
+// of its own event, so "Current Semester" moves forward automatically.
+const CURRENT_EVENT = 'Current Semester';
 const FOLDERS = [
   { folder: 'macai/2018-2019', event: 'Archived Moments', yearLabel: '2018-2019' },
   { folder: 'macai/2019-2020', event: 'Archived Moments', yearLabel: '2019-2020' },
   { folder: 'macai/2021-2022', event: 'Post-Pandemic', yearLabel: '2021-2022' },
   { folder: 'macai/2023-2024', event: 'Club Events', yearLabel: '2023-2024' },
-  { folder: 'macai/2024-2025', event: 'Current Semester', yearLabel: '2024-2025' },
+  { folder: 'macai/2024-2025', event: 'Club Events', yearLabel: '2024-2025' },
+  { folder: 'macai/2025-2026', event: 'Club Events', yearLabel: '2025-2026' },
+  { folder: 'macai/2026-2027', event: 'Club Events', yearLabel: '2026-2027' },
 ];
 
 async function fetchCloudinaryFolder(folder) {
@@ -97,14 +103,23 @@ async function main() {
 
   if (CLOUD_NAME && API_KEY && API_SECRET) {
     console.log('Syncing gallery from Cloudinary...');
-    for (const { folder, event, yearLabel } of FOLDERS) {
+    const fetched = [];
+    for (const entry of FOLDERS) {
       try {
-        const resources = await fetchCloudinaryFolder(folder);
-        console.log(`  ${folder}: ${resources.length} images`);
-        images.push(...resources.map((r) => transformImage(r, event, yearLabel)));
+        const resources = await fetchCloudinaryFolder(entry.folder);
+        console.log(`  ${entry.folder}: ${resources.length} images`);
+        fetched.push({ ...entry, resources });
       } catch (err) {
-        console.error(`  Error fetching ${folder}:`, err.message);
+        console.error(`  Error fetching ${entry.folder}:`, err.message);
       }
+    }
+
+    const newest = fetched.filter((f) => f.resources.length > 0).at(-1);
+    if (newest) console.log(`  "${CURRENT_EVENT}" → ${newest.folder}`);
+
+    for (const f of fetched) {
+      const event = f === newest ? CURRENT_EVENT : f.event;
+      images.push(...f.resources.map((r) => transformImage(r, event, f.yearLabel)));
     }
   } else {
     console.log('No Cloudinary credentials found — writing placeholder gallery.');

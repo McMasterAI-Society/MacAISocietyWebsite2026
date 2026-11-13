@@ -66,7 +66,7 @@ All tokens are in `src/index.css` inside `@theme {}`. Use Tailwind utility class
 - **Adding Shadcn components:** `npx shadcn@latest add <component>` — they land in `src/Components/ui/`.
 - **Gallery shuffle is date-stable** — the randomization is seeded by date intentionally; don't replace it with `Math.random()`.
 - **Public JSON files are auto-generated** — `github-projects.json` and `gallery.json` in `/public` are overwritten by sync scripts. Do not hand-edit them.
-- **CI sync commits use `[skip ci]`** — this prevents infinite CI loops on auto-sync commits.
+- **CI sync commits use `[skip ci]`** — this prevents infinite CI loops on auto-sync commits. Vercel doesn't deploy these bot commits, so the workflow calls a Vercel Deploy Hook (`VERCEL_DEPLOY_HOOK_URL` repo secret) after a sync that changed data.
 
 ## Routing
 

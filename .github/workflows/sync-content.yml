@@ -35,10 +35,29 @@ jobs:
           CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
 
       - name: Commit updated data
+        id: commit
         run: |
           cd ..
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add frontend/public/github-projects.json frontend/public/gallery.json
-          git diff --cached --quiet || git commit -m "chore: sync dynamic content [skip ci]"
-          git push
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "chore: sync dynamic content [skip ci]"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Bot commits ([skip ci], github-actions author) aren't deployed by Vercel's
+      # Git integration, so trigger a production deploy explicitly via a Deploy Hook.
+      - name: Trigger Vercel deploy
+        if: steps.commit.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        env:
+          VERCEL_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$VERCEL_DEPLOY_HOOK_URL" ]; then
+            echo "::warning::VERCEL_DEPLOY_HOOK_URL secret not set — synced data won't go live until the next deploy."
+            exit 0
+          fi
+          curl -fsS -X POST "$VERCEL_DEPLOY_HOOK_URL"

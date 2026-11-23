@@ -1,11 +1,28 @@
 {
-  "syncedAt": "2026-11-22T14:24:52.173Z",
+  "syncedAt": "2026-11-23T17:51:16.832Z",
   "orgs": [
     "McMasterAI-Society",
     "McMasterAI"
   ],
-  "count": 24,
+  "count": 25,
   "projects": [
+    {
+      "id": "1468008595",
+      "name": "EtudeEngine",
+      "description": "Personalized piano practice, composed for you.",
+      "language": "Other",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "year": 2027,
+      "updatedAt": "2026-11-22T21:33:40Z",
+      "url": "https://github.com/McMasterAI-Society/EtudeEngine",
+      "homepage": null,
+      "org": "McMasterAI-Society",
+      "image": "https://opengraph.githubassets.com/1/McMasterAI-Society/EtudeEngine",
+      "isArchived": false,
+      "isFork": false
+    },
     {
       "id": "1157465238",
       "name": "MacAISocietyWebsite2026",
